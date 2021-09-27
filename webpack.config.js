@@ -23,8 +23,8 @@ module.exports = (env, args) => {
       new MiniCssExtractPlugin(),
       new CriticalCssPlugin({
         base: path.resolve(__dirname, 'build'),
-        width: 375,
-        height: 1565,
+        width: 1075,
+        height: 1565
       })
     ],
     devServer: {
