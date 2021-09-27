@@ -20,8 +20,12 @@ module.exports = (env, args) => {
           { from: "src/assets", to: "assets" },
         ],
       }),
-      new CriticalCssPlugin(),
-      new MiniCssExtractPlugin()
+      new MiniCssExtractPlugin(),
+      new CriticalCssPlugin({
+        base: path.resolve(__dirname, 'build'),
+        width: 375,
+        height: 1565,
+      })
     ],
     devServer: {
       static: {
