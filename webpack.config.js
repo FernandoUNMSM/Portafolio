@@ -1,8 +1,11 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require("copy-webpack-plugin");
+const CriticalCssPlugin = require('critical-css-webpack-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-module.exports = () => {
+module.exports = (env, args) => {
+  const {mode} = args
   return {
     entry: path.resolve(__dirname, 'src/js/index.js'),
     output: {
@@ -17,6 +20,8 @@ module.exports = () => {
           { from: "src/assets", to: "assets" },
         ],
       }),
+      new CriticalCssPlugin(),
+      new MiniCssExtractPlugin()
     ],
     devServer: {
       static: {
@@ -29,11 +34,15 @@ module.exports = () => {
       rules: [
         {
           test: /.pug$/,
-          loader: 'pug-loader'
+          use: 'pug-loader'
         },
         {
           test: /.(scss|css)$/,
-          use: ['style-loader', 'css-loader', 'sass-loader']
+          use: [mode !== "production"
+            ? "style-loader"
+            : MiniCssExtractPlugin.loader,
+            'css-loader',
+            'sass-loader']
         },
         {
           test: /\.(png|svg|jpg|jpeg|gif)$/i,
