@@ -1,0 +1,9 @@
+.proyectos {
+  height: 400px;
+  background-color: var(--tercary);
+  &__title {
+    h1 {
+      @include title;
+    }
+  }
+}

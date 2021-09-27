@@ -1,14 +1,17 @@
 $grayPrimary: rgb(37, 37, 37);
 $graySecondary: rgb(85, 81, 81);
+$grayTercary: rgb(124, 121, 121);;
 $darkTextPrimary: #fff;
 
 $whitePrimary: rgb(255, 245, 151);
 $green: rgb(255, 255, 255);
+$whiteTercary: rgb(255, 107, 88);
 $lightTextPrimary: #000;
 
 .theme {
   --primary: #{$whitePrimary};
   --secondary: #{$green};
+  --tercary: #{$whiteTercary};
   --colorText: #{$lightTextPrimary};
   --contraryPrimary: #{$grayPrimary};
   --contrarySecondary: #{$graySecondary};
@@ -16,6 +19,7 @@ $lightTextPrimary: #000;
   &--dark {
     --primary: #{$grayPrimary};
     --secondary: #{$graySecondary};
+    --tercary: #{$grayTercary};
     --colorText: #{$darkTextPrimary};
     --contraryPrimary: #{$whitePrimary};
     --contrarySecondary: #{$green};

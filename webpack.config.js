@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require("copy-webpack-plugin");
 const CriticalCssPlugin = require('critical-css-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = (env, args) => {
   const {mode} = args
@@ -25,7 +26,8 @@ module.exports = (env, args) => {
         base: path.resolve(__dirname, 'build'),
         width: 1075,
         height: 1565
-      })
+      }),
+      // (mode !== "production") || new CleanWebpackPlugin()
     ],
     devServer: {
       static: {
