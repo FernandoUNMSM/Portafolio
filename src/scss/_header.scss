@@ -1,0 +1,239 @@
+
+.header {
+  background-color: var(--primary);
+  height: 80vh;
+  // overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  position: relative;
+  padding-bottom: 10px;
+  &__menu__container {
+    position: relative;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    & > i {
+      font-size: 2em;
+      margin: 20px;
+      color: var(--colorText);
+    }
+  }
+}
+.header__menu {
+  transition: right .3s;
+  position: fixed;
+  list-style: none;
+  background-color: var(--contraryPrimary);
+  height: 100vh;
+  width: 300px;
+  right: -100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1em;
+  padding-top: 10px;
+  &.on {
+    right: 0;
+  }
+  &__item {
+    height: 40px;
+    display: grid;
+    place-items: center;
+    color: var(--contraryColorText);
+    & > i{
+      font-size: 2em;
+    }
+    .toggle {
+      width: 80px;
+      height: 40px;
+      border-radius: 50px;
+      margin: 10px 20px;
+      border: 3px solid var(--contraryColorText);
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      .circle {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        margin: 0 3px;
+        background-color: var(--contraryColorText);
+        will-change: transform;
+        transition: transform .3s;
+      }
+      &.on .circle {
+        transform: translateX(131%);
+      }
+    }
+  }
+}
+.header__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 20px;
+  &__image {
+    animation: header .8s ease-in-out;
+    & figure {
+      display: flex;
+      justify-content: center;
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+  }
+  &__text {
+    color: var(--colorText);
+    text-align: center;
+    animation: headertext .5s ease-in-out;
+    h1 {
+      @include texto;
+      text-transform: uppercase;
+    }
+  }
+}
+@keyframes header {
+  from {
+    opacity: 0;
+    transform: translateX(80%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes headertext {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.header__redes {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  &__item {
+    height: 30px;
+    display: flex;
+    color: var(--colorText);
+    text-decoration: none;
+    // opacity: 0;
+    &:nth-child(4){
+      animation: redes .3s ease-in-out;
+    }
+    &:nth-child(3){
+      animation: redes .6s ease-in-out;
+    }
+    &:nth-child(2){
+      animation: redes .9s ease-in-out;
+    }
+    &:nth-child(1){
+      animation: redes 1.2s ease-in-out;
+    }
+    // text-transform: uppercase;
+    div {
+      display: flex;
+      align-items: center;
+    }
+    &__icon {
+      height: 100%;
+      i {
+        margin: 0 10px;
+      }
+    }
+    &__name {
+      height: 100%;
+      p {
+        @include texto;
+      }
+    }
+  }
+}
+@keyframes redes {
+  from {
+    opacity: 0;
+    transform: translateX(-150%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: $medium) {
+  .header__menu__container {
+    justify-content: center;
+    i {
+      display: none;
+    }
+  }
+  .header__menu {
+    position: initial;
+    height: auto;
+    flex-direction: row;
+    background-color: transparent;
+    width: auto;
+    @include texto;
+    &__item {
+      cursor: pointer;
+      color: var(--colorText);
+      &:first-child {
+        display: none;
+      }
+      padding: 0 20px;
+    }
+    .toggle {
+      border: 3px solid var(--colorText);
+      background-color: transparent;
+      position: fixed;
+      top: 0;
+      left: 0;
+      .circle {
+        background-color: var(--colorText);
+      }
+    }
+  }
+  .header__info {
+    flex-direction: row-reverse;
+    &__image {
+      & figure {
+        width: 350px;
+        height: 350px;
+      }
+    }
+    &__text {
+      text-align: initial;
+      h1 {
+        font-weight: bold;
+        margin: 20px 0;
+        font-size: 2.6em;
+      }
+      &__content {
+        p {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+  .header__redes {
+    display: flex;
+    justify-content: end;
+    &__item {
+      cursor: pointer;
+      overflow: hidden;
+      &:hover &__name{
+        width: 150px;
+      }
+      &__name {
+        transition: all .3s;
+        width: 0;
+      }
+    }
+  }
+}

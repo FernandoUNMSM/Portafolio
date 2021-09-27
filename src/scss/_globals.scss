@@ -1,0 +1,55 @@
+$grayPrimary: rgb(37, 37, 37);
+$graySecondary: rgb(85, 81, 81);
+$darkTextPrimary: #fff;
+
+$whitePrimary: rgb(255, 245, 151);
+$green: rgb(255, 255, 255);
+$lightTextPrimary: #000;
+
+.theme {
+  --primary: #{$whitePrimary};
+  --secondary: #{$green};
+  --colorText: #{$lightTextPrimary};
+  --contraryPrimary: #{$grayPrimary};
+  --contrarySecondary: #{$graySecondary};
+  --contraryColorText: #{$darkTextPrimary};
+  &--dark {
+    --primary: #{$grayPrimary};
+    --secondary: #{$graySecondary};
+    --colorText: #{$darkTextPrimary};
+    --contraryPrimary: #{$whitePrimary};
+    --contrarySecondary: #{$green};
+    --contraryColorText: #{$lightTextPrimary};
+  }
+}
+
+// Tamaños
+// $mobile:
+$medium: 640px;
+$large: 1008px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  ::selection {
+    background-color: rgb(212, 243, 128);
+  }
+}
+body {
+  font-family: 'Jura', sans-serif;
+}
+.container {
+  overflow: hidden;
+}
+@mixin texto {
+  color: var(--colorText);
+  font-weight: lighter;
+}
+@mixin title {
+  @include texto;
+  text-align: center;
+  padding: 10px 0;
+}
