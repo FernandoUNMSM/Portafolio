@@ -28,6 +28,21 @@ export default () => {
       body.classList.add('theme--dark')
     }
   })
+  const proyectos = divElement.querySelector('#proyectos')
+  const options =  {
+    // root,
+    rootMargin: '0px',
+    // threshold
+  }
 
+  const callback = (entries, observer) => {
+    if(entries[0].isIntersecting) {
+      const projects = proyectos.childNodes[1].childNodes;
+      projects.forEach(project => project.classList.add('on'))
+      observer.disconnect()
+    }
+  }
+  const observer = new IntersectionObserver(callback, options)
+  observer.observe(proyectos)
   return divElement;
 };
