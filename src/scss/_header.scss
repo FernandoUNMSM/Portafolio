@@ -39,7 +39,10 @@
     height: 40px;
     display: grid;
     place-items: center;
-    color: var(--contraryColorText);
+    a {
+      color: var(--contraryColorText);
+      text-decoration: none;
+    }
     & > i{
       font-size: 2em;
     }
@@ -62,7 +65,7 @@
         transition: transform .3s;
       }
       &.on .circle {
-        transform: translateX(131%);
+        transform: translateX(129%);
       }
     }
   }
@@ -182,7 +185,9 @@
     @include texto;
     &__item {
       cursor: pointer;
-      color: var(--colorText);
+      a {
+        color: var(--colorText);
+      }
       &:first-child {
         display: none;
       }

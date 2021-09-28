@@ -1,4 +1,4 @@
--var menu_items= ['Home', 'Proyectos', 'Yo', 'Sobre este portafolio'];
+-var menu_items = [['Home', '#'], ['Proyectos', '#'], ['Yo', '/#'], ['Sobre este portafolio', '/#/portafolio']];
 .header
   nav.header__menu__container
     i.fas.fa-bars.burguerMenu
@@ -6,7 +6,8 @@
       li.header__menu__item
         i.fas.fa-times.closeMenu
       each item in menu_items
-        li.header__menu__item #{item}
+        li.header__menu__item
+          a(href=item[1]) #{item[0]}
       li.header__menu__item
         .toggle#toggle
           .circle

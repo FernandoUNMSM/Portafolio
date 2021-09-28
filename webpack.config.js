@@ -27,7 +27,7 @@ module.exports = (env, args) => {
         width: 1075,
         height: 1565
       }),
-      // (mode !== "production") || new CleanWebpackPlugin()
+      // new CleanWebpackPlugin()
     ],
     devServer: {
       static: {

@@ -5,7 +5,7 @@ $darkTextPrimary: #fff;
 
 $whitePrimary: rgb(255, 245, 151);
 $green: rgb(255, 255, 255);
-$whiteTercary: rgb(255, 107, 88);
+$whiteTercary: rgb(132, 255, 235);
 $lightTextPrimary: #000;
 
 .theme {
@@ -56,4 +56,18 @@ body {
   @include texto;
   text-align: center;
   padding: 10px 0;
+}
+@mixin button {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  color: var(--colorText);
+  text-decoration: none;
+  background-color: var(--primary);
+  width: fit-content;
+  padding: 10px 20px;
+  margin: 20px auto;
+  p {
+    margin-left: 10px;
+  }
 }

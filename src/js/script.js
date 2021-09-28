@@ -1,7 +1,6 @@
 // const buttonOpenMenu = document.querySelector('.burguerMenu')
 // const buttonCloseMenu = document.querySelector('.closeMenu')
 // const menuHeader = document.querySelector('.header__menu')
-
 // buttonOpenMenu.addEventListener('click', () => {
 //   menuHeader.classList.add('on')
 // })
