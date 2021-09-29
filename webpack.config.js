@@ -5,6 +5,7 @@ const CriticalCssPlugin = require('critical-css-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
+const HtmlCriticalWebpackPlugin = require('html-critical-webpack-plugin');
 module.exports = (env, args) => {
   const {mode} = args
   return {
@@ -22,11 +23,24 @@ module.exports = (env, args) => {
         ],
       }),
       new MiniCssExtractPlugin(),
-      new CriticalCssPlugin({
+      new HtmlCriticalWebpackPlugin({
         base: path.resolve(__dirname, 'build'),
-        width: 1075,
-        height: 1565
+        src: 'index.html',
+        dest: 'index.html',
+        inline: true,
+        minify: true,
+        extract: true,
+        width: 320,
+        height: 565,
+        penthouse: {
+          blockJSRequests: false,
+        },
       }),
+      // new CriticalCssPlugin({
+      //   base: path.resolve(__dirname, 'build'),
+      //   width: 1075,
+      //   height: 1565
+      // }),
       // new CleanWebpackPlugin()
     ],
     devServer: {
