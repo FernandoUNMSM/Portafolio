@@ -1,4 +1,4 @@
-import 'normalize.css'
+// import 'normalize.css'
 import './../scss/main.scss'
 import 'hammerjs'
 // import './../index.pug'
