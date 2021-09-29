@@ -1,0 +1,13 @@
+-var menu_items = [['Home', '#'], ['Proyectos', '#'], ['Yo', '/#'], ['Sobre este portafolio', '/#/portafolio']];
+
+nav.header__menu__container
+  i.fas.fa-bars.burguerMenu
+  ul.header__menu
+    li.header__menu__item
+      i.fas.fa-times.closeMenu
+    each item in menu_items
+      li.header__menu__item
+        a(href=item[1]) #{item[0]}
+    li.header__menu__item
+      .toggle#toggle
+        .circle

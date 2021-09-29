@@ -1,5 +1,6 @@
-import { pages } from "./../controllers/index";
+import { pages } from "../js/controllers/index";
 import getHash from './../js/getHash';
+import {common} from './../js/common';
 
 const routes = {
   '/': pages.home(),
@@ -11,6 +12,7 @@ const router = () => {
   content.innerHTML = "";
 
   let hash = getHash();
+  // common(routes[hash])
   content.appendChild(routes[hash]);
 };
 

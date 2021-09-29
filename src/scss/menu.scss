@@ -1,0 +1,126 @@
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+.header__menu__container {
+  position: relative;
+  height: auto;
+  display: flex;
+  justify-content: flex-end;
+  & > i {
+    font-size: 2em;
+    margin: 20px;
+    color: var(--colorText);
+  }
+}
+.header__menu {
+  transition: right .3s;
+  position: fixed;
+  list-style: none;
+  background-color: var(--contraryPrimary);
+  height: 100vh;
+  width: 300px;
+  right: -100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1em;
+  // padding-top: 10px;
+  &.on {
+    right: 0;
+    padding-top: 10px;
+  }
+  &__item {
+    height: 40px;
+    display: grid;
+    place-items: center;
+    a {
+      color: var(--contraryColorText);
+      text-decoration: none;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+    & > i{
+      font-size: 2em;
+      color: var(--contraryColorText);
+    }
+    .toggle {
+      width: 80px;
+      height: 40px;
+      border-radius: 50px;
+      margin: 10px 20px;
+      border: 3px solid var(--contraryColorText);
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      background: rgba(255,255,255, 0.1);
+      backdrop-filter: blur(2px);
+      .circle {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        margin: 0 3px;
+        background-color: var(--contraryColorText);
+        will-change: transform;
+        transition: transform .3s;
+      }
+      &.on .circle {
+        transform: translateX(129%);
+      }
+    }
+  }
+}
+
+@media (min-width: $medium) {
+  .header {
+    // background: rgba(255, 247, 222, 0.9);
+    backdrop-filter: blur(7px);
+    padding: 10px 0;
+    transition: .3s;
+    &.on {
+      box-shadow: 1px 1px 26px -17px rgba(0,0,0,0.81);
+      background: rgba(250, 248, 244, 0.8);
+    }
+  }
+  .header__menu__container {
+    justify-content: center;
+    i {
+      display: none;
+    }
+  }
+  .header__menu {
+    position: initial;
+    height: auto;
+    flex-direction: row;
+    background-color: transparent;
+    width: auto;
+    @include texto;
+    &__item {
+      cursor: pointer;
+      a {
+        color: var(--colorText);
+        padding: 0 20px;
+      }
+      &:first-child {
+        display: none;
+      }
+      &:last-child {
+        position: absolute;
+        left: 0;
+      }
+    }
+    .toggle {
+      border: 3px solid var(--colorText);
+      background-color: transparent;
+      // position: fixed;
+      // top: 0;
+      // left: 0;
+      margin: 0 0 0 20px;
+      .circle {
+        background-color: var(--colorText);
+      }
+    }
+  }
+}

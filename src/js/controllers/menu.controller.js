@@ -1,8 +1,8 @@
-import view from "../html/home/index.pug";
+import view from "../../html/common/menu.pug";
+// console.log(view())
 export default () => {
   const divElement = document.createElement("div");
   divElement.innerHTML = view();
-
   const buttonOpenMenu = divElement.querySelector('.burguerMenu')
   const buttonCloseMenu = divElement.querySelector('.closeMenu')
   const menuHeader = divElement.querySelector('.header__menu')
@@ -12,12 +12,15 @@ export default () => {
   buttonCloseMenu.addEventListener('click', () => {
     menuHeader.classList.remove('on')
   })
-
   const togglebutton = divElement.querySelector('#toggle')
   const body = document.body
+
   if(!body.classList.contains('theme--dark')) {
     togglebutton.classList.add('on')
+  }else {
+    togglebutton.classList.remove('on')
   }
+
   togglebutton.addEventListener('click', ()=> {
     togglebutton.classList.toggle('on')
     if(togglebutton.classList.contains('on')) {
@@ -28,21 +31,14 @@ export default () => {
       body.classList.add('theme--dark')
     }
   })
-  const proyectos = divElement.querySelector('#proyectos')
-  const options =  {
-    // root,
-    rootMargin: '0px',
-    // threshold
-  }
-
-  const callback = (entries, observer) => {
-    if(entries[0].isIntersecting) {
-      const projects = proyectos.childNodes[1].childNodes;
-      projects.forEach(project => project.classList.add('on'))
-      observer.disconnect()
+  const header = document.querySelector('#header')
+  window.onscroll = () => {
+    if(scrollY != 0) {
+      header.classList.add('on')
+    }else {
+      header.classList.remove('on')
     }
   }
-  const observer = new IntersectionObserver(callback, options)
-  observer.observe(proyectos)
+
   return divElement;
 };

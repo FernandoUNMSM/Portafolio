@@ -10,12 +10,13 @@
     display: grid;
     padding: 20px 30px;
     // grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
-    gap: 30px;
+    gap: 50px;
     align-items: center;
     justify-items: center;
   }
   &__more {
     padding: 20px 0;
+    text-align: center;
     &__button {
       @include button;
       margin: 0 auto;
@@ -28,7 +29,7 @@
   height: 250px;
   // border: 1px solid white;
   background: rgba(255,255,255, 0.1);
-  box-shadow: 4px 10px 20px rgba(0,0,0, 0.5);
+  box-shadow: 4px 6px 20px rgba(0,0,0, 0.5);
   // background-color: var(--colorText);
   backdrop-filter: blur(2px);
   color: var(--colorText);
@@ -38,6 +39,9 @@
   justify-content: space-between;
   &__title {
     font-size: .8em;
+    h1 {
+      margin: 0;
+    }
   }
   &__buttons {
     display: flex;

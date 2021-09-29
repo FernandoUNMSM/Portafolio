@@ -36,6 +36,8 @@ $large: 1008px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: inherit!important;
+  //Este important solo esta debido a la libreria HammerJS
 }
 :root {
   ::selection {
@@ -56,6 +58,7 @@ body {
   @include texto;
   text-align: center;
   padding: 10px 0;
+  margin: 0;
 }
 @mixin button {
   display: flex;
@@ -70,4 +73,7 @@ body {
   p {
     margin-left: 10px;
   }
+}
+.header__conveniente {
+  height: 60px;
 }

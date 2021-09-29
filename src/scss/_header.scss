@@ -1,5 +1,4 @@
-
-.header {
+.home__header {
   background-color: var(--primary);
   height: 80vh;
   // overflow: hidden;
@@ -7,72 +6,9 @@
   grid-template-rows: auto 1fr auto;
   position: relative;
   padding-bottom: 10px;
-  &__menu__container {
-    position: relative;
-    height: auto;
-    display: flex;
-    justify-content: flex-end;
-    & > i {
-      font-size: 2em;
-      margin: 20px;
-      color: var(--colorText);
-    }
-  }
 }
-.header__menu {
-  transition: right .3s;
-  position: fixed;
-  list-style: none;
-  background-color: var(--contraryPrimary);
-  height: 100vh;
-  width: 300px;
-  right: -100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 1em;
-  padding-top: 10px;
-  &.on {
-    right: 0;
-  }
-  &__item {
-    height: 40px;
-    display: grid;
-    place-items: center;
-    a {
-      color: var(--contraryColorText);
-      text-decoration: none;
-    }
-    & > i{
-      font-size: 2em;
-    }
-    .toggle {
-      width: 80px;
-      height: 40px;
-      border-radius: 50px;
-      margin: 10px 20px;
-      border: 3px solid var(--contraryColorText);
-      background-color: transparent;
-      display: flex;
-      align-items: center;
-      background: rgba(255,255,255, 0.1);
-      backdrop-filter: blur(2px);
-      .circle {
-        height: 30px;
-        width: 30px;
-        border-radius: 50%;
-        margin: 0 3px;
-        background-color: var(--contraryColorText);
-        will-change: transform;
-        transition: transform .3s;
-      }
-      &.on .circle {
-        transform: translateX(129%);
-      }
-    }
-  }
-}
-.header__info {
+
+.home__header__info {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -119,7 +55,7 @@
     transform: translateY(0);
   }
 }
-.header__redes {
+.home__header__redes {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -189,24 +125,14 @@
       cursor: pointer;
       a {
         color: var(--colorText);
+        padding: 0 20px;
       }
       &:first-child {
         display: none;
       }
-      padding: 0 20px;
-    }
-    .toggle {
-      border: 3px solid var(--colorText);
-      background-color: transparent;
-      position: fixed;
-      top: 0;
-      left: 0;
-      .circle {
-        background-color: var(--colorText);
-      }
     }
   }
-  .header__info {
+  .home__header__info {
     flex-direction: row-reverse;
     &__image {
       & figure {
@@ -228,7 +154,7 @@
       }
     }
   }
-  .header__redes {
+  .home__header__redes {
     display: flex;
     justify-content: end;
     &__item {

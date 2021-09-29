@@ -1,0 +1,39 @@
+.portafolio {
+  &__header {
+    background-color: var(--primary);
+    &__title {
+      h1 {
+        @include title;
+        text-transform: uppercase;
+      }
+    }
+  }
+  &__content {
+    padding-top: 20px;
+    &__tecnologias {
+      &__title {
+        h1 {
+          @include title;
+          color: #{$grayPrimary}
+        }
+      }
+      &__info {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        place-items: center;
+        padding: 30px;
+        &__item {
+          figure {
+            height: 300px;
+            width: 300px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
