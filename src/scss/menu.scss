@@ -80,8 +80,12 @@
     padding: 10px 0;
     transition: .3s;
     &.on {
-      box-shadow: 1px 1px 26px -17px rgba(0,0,0,0.81);
-      background: rgba(250, 248, 244, 0.8);
+      // box-shadow: 1px 1px 26px -17px rgba(0,0,0,0.81);
+      box-shadow: 1px 1px 26px -17px rgba(255,255,255,0.81);
+      background: var(--menuBackground);
+      // a {
+      //   color: $lightTextPrimary;
+      // }
     }
   }
   .header__menu__container {

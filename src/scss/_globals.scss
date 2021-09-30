@@ -2,11 +2,13 @@ $grayPrimary: rgb(37, 37, 37);
 $graySecondary: rgb(85, 81, 81);
 $grayTercary: rgb(124, 121, 121);;
 $darkTextPrimary: #fff;
+$darkMenuBackground: rgba(68, 68, 68, 0.8);
 
 $whitePrimary: rgb(255, 245, 151);
 $green: rgb(255, 255, 255);
 $whiteTercary: rgb(132, 255, 235);
 $lightTextPrimary: #000;
+$lightMenuBackground: rgba(250, 248, 244, 0.8);
 
 .theme {
   --primary: #{$whitePrimary};
@@ -16,6 +18,7 @@ $lightTextPrimary: #000;
   --contraryPrimary: #{$grayPrimary};
   --contrarySecondary: #{$graySecondary};
   --contraryColorText: #{$darkTextPrimary};
+  --menuBackground: #{$lightMenuBackground};
   &--dark {
     --primary: #{$grayPrimary};
     --secondary: #{$graySecondary};
@@ -24,6 +27,7 @@ $lightTextPrimary: #000;
     --contraryPrimary: #{$whitePrimary};
     --contrarySecondary: #{$green};
     --contraryColorText: #{$lightTextPrimary};
+    --menuBackground: #{$darkMenuBackground};
   }
 }
 
