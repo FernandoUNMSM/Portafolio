@@ -23,19 +23,19 @@ module.exports = (env, args) => {
         ],
       }),
       new MiniCssExtractPlugin(),
-      new HtmlCriticalWebpackPlugin({
-        base: path.resolve(__dirname, 'build'),
-        src: 'index.html',
-        dest: 'index.html',
-        inline: true,
-        minify: true,
-        extract: true,
-        width: 320,
-        height: 565,
-        penthouse: {
-          blockJSRequests: false,
-        },
-      }),
+      // new HtmlCriticalWebpackPlugin({
+      //   base: path.resolve(__dirname, 'build'),
+      //   src: 'index.html',
+      //   dest: 'index.html',
+      //   inline: true,
+      //   minify: true,
+      //   extract: true,
+      //   width: 320,
+      //   height: 565,
+      //   penthouse: {
+      //     blockJSRequests: false,
+      //   },
+      // }),
       // new CriticalCssPlugin({
       //   base: path.resolve(__dirname, 'build'),
       //   width: 1075,

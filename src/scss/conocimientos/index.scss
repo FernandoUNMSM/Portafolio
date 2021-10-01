@@ -1,0 +1,372 @@
+@import "./circleBarProgress.scss";
+
+$javascript: rgb(245, 231, 45);
+$css: rgb(24, 146, 245);
+$html: rgb(248, 112, 48);
+$nodejs: rgba(140,200,75,255);
+$reactjs: rgba(0,216,255,255);
+$angular: rgba(221,0,49,255);
+$typescript: rgba(0,122,204,255);
+$sass: rgba(207,100,154,255);
+$bootstrap: rgba(50,22,66,255);
+$stylus: rgba(51,51,51,255);
+$pug: rgba(239,204,163,255);
+$expressjs: rgba(0,0,0,255);
+$mongodb: rgba(108,172,72,255);
+$mysql: rgba(0,84,107,255);
+
+$webpack: rgba(142,214,251,255);
+$git: rgba(240,60,46,255);
+$heroku: rgba(103,98,166,255);
+$npm: rgba(203,56,55,255);
+$github: rgba(0,0,0,255);
+
+.conocimientos__header {
+  background-color: var(--conocimientosHeaderBackground);
+  h1 {
+    @include title;
+    text-transform: uppercase;
+  }
+}
+.conocimientos__content__container__title {
+  h1 {
+    @include title;
+    color: #{$grayPrimary}
+  }
+}
+.conocimientos__content {
+  display: grid;
+  place-items: center;
+  gap: 40px;
+  padding: 20px 0;
+  background-color: var(--conocimientosBackground);
+  &.extras {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    .conocimientos__content__section {
+      display: initial;
+      width: auto;
+    }
+  }
+  &__section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 20px;
+    &.javascript {
+      .circular__bar:nth-child(1),
+      .circular__bar:nth-child(2)
+      {
+        background-color: $javascript;
+      }
+      .circular__bar:nth-child(2) {
+        transform: rotate(300deg);
+        animation: js .7s 1s;
+      }
+      .circular,
+      .circular__inner {
+        border-color: $javascript;
+      }
+    }
+    &.css3 {
+      .circular__bar:nth-child(1),
+      .circular__bar:nth-child(2)
+      {
+        background-color: $css;
+      }
+      .circular__bar:nth-child(2) {
+        transform: rotate(310deg);
+        animation: css .7s 1s;
+      }
+      .circular,
+      .circular__inner {
+        border-color: $css;
+      }
+    }
+    &.html5 {
+      .circular__bar:nth-child(1),
+      .circular__bar:nth-child(2)
+      {
+        background-color: $html;
+      }
+      .circular__bar:nth-child(2) {
+        transform: rotate(320deg);
+        animation: html .7s 1s;
+      }
+      .circular,
+      .circular__inner {
+        border-color: $html;
+      }
+    }
+    &.nodejs {
+      .circular__bar:nth-child(1),
+      .circular__bar:nth-child(2)
+      {
+        background-color: $nodejs;
+        ;
+      }
+      .circular__bar:nth-child(2) {
+        transform: rotate(190deg);
+        animation: nodejs .7s 1s;
+      }
+      .circular,
+      .circular__inner {
+        border-color: $nodejs;
+      }
+    }
+    &.webpack {
+      .circular__bar:nth-child(1),
+      .circular__bar:nth-child(2)
+      {
+        background-color: $webpack;
+        ;
+      }
+      .circular__bar:nth-child(2) {
+        transform: rotate(210deg);
+        animation: webpack .7s 1s;
+      }
+      .circular,
+      .circular__inner {
+        border-color: $webpack;
+      }
+    }
+    &.git {
+      .circular__bar:nth-child(1),
+      .circular__bar:nth-child(2)
+      {
+        background-color: $git;
+        ;
+      }
+      .circular__bar:nth-child(2) {
+        transform: rotate(260deg);
+        animation: git .7s 1s;
+      }
+      .circular,
+      .circular__inner {
+        border-color: $git;
+      }
+    }
+    &.heroku {
+      .circular__bar:nth-child(1),
+      .circular__bar:nth-child(2)
+      {
+        background-color: $heroku;
+        ;
+      }
+      .circular__bar:nth-child(2) {
+        transform: rotate(240deg);
+        animation: heroku .7s 1s;
+      }
+      .circular,
+      .circular__inner {
+        border-color: $heroku;
+      }
+    }
+    &.npm {
+      .circular__bar:nth-child(1),
+      .circular__bar:nth-child(2)
+      {
+        background-color: $npm;
+        ;
+      }
+      .circular__bar:nth-child(2) {
+        transform: rotate(200deg);
+        animation: npm .7s 1s;
+      }
+      .circular,
+      .circular__inner {
+        border-color: $npm;
+      }
+    }
+    &.github {
+      .circular__bar:nth-child(1),
+      .circular__bar:nth-child(2)
+      {
+        background-color: $github;
+        ;
+      }
+      .circular__bar:nth-child(2) {
+        transform: rotate(270deg);
+        animation: github .7s 1s;
+      }
+      .circular,
+      .circular__inner {
+        border-color: $github;
+      }
+    }
+  }
+}
+.frameworks {
+  width: 80%;
+  &__item {
+    margin-bottom: 10px;
+    &__title {
+      height: 30px;
+      display: flex;
+      margin-bottom: 5px;
+      figure {
+        margin: 0 10px 0 0;
+        height: 100%;
+        img {
+          height: 100%;
+        }
+      }
+      h1 {
+        font-size: 1.5em;
+      }
+    }
+    &__container {
+      width: 100%;
+      height: 30px;
+      position: relative;
+      background: transparent;
+      &__progress {
+        width: 60%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        &::after {
+          content: '';
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          background-color: #000;
+          animation: line 1.6s;
+        }
+      }
+    }
+    &.react {
+      .frameworks__item__container {
+        border: 1px solid $reactjs;
+        &__progress{
+          width: 80%;
+          &::after {
+            background-color: $reactjs;
+          }
+        }
+      }
+    }
+    &.angular {
+      .frameworks__item__container {
+        border: 1px solid $angular;
+        &__progress{
+          width: 30%;
+          &::after {
+            background-color: $angular;
+          }
+        }
+      }
+    }
+    &.typescript {
+      .frameworks__item__container {
+        border: 1px solid $typescript;
+        &__progress{
+          width: 35%;
+          &::after {
+            background-color: $typescript;
+          }
+        }
+      }
+    }
+    &.sass {
+      .frameworks__item__container {
+        border: 1px solid $sass;
+        &__progress{
+          width: 80%;
+          &::after {
+            background-color: $sass;
+          }
+        }
+      }
+    }
+    &.bootstrap {
+      .frameworks__item__container {
+        border: 1px solid $bootstrap;
+        &__progress{
+          width: 20%;
+          &::after {
+            background-color: $bootstrap;
+          }
+        }
+      }
+    }
+    &.stylus {
+      .frameworks__item__container {
+        border: 1px solid $stylus;
+        &__progress{
+          width: 50%;
+          &::after {
+            background-color: $stylus;
+          }
+        }
+      }
+    }
+    &.pug {
+      .frameworks__item__container {
+        border: 1px solid $pug;
+        &__progress{
+          width: 80%;
+          &::after {
+            background-color: $pug;
+          }
+        }
+      }
+    }
+    &.expressjs {
+      .frameworks__item__container {
+        border: 1px solid $expressjs;
+        &__progress{
+          width: 60%;
+          &::after {
+            background-color: $expressjs;
+          }
+        }
+      }
+    }
+    &.mongodb {
+      .frameworks__item__container {
+        border: 1px solid $mongodb;
+        &__progress{
+          width: 65%;
+          &::after {
+            background-color: $mongodb;
+          }
+        }
+      }
+    }
+    &.mysql {
+      .frameworks__item__container {
+        border: 1px solid $mysql;
+        &__progress{
+          width: 70%;
+          &::after {
+            background-color: $mysql;
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes line {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+
+@media (min-width: $medium) {
+  .conocimientos__content {
+    grid-template-columns: repeat(auto-fit, minmax(640px, 1fr));
+    padding: 30px 20px;
+    gap: 80px 40px;
+    &__section {
+      grid-template-columns: 40% 60%;
+    }
+  }
+}

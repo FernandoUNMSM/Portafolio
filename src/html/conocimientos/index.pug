@@ -1,0 +1,54 @@
+-var languages = [['javascript', ['react', 'angular', 'typescript']], ['css3', ['sass', 'bootstrap', 'stylus']],['html5',['pug']], ['nodejs', ['expressjs','mongodb', 'mysql']]];
+
+-var extras = ['webpack', 'git', 'heroku', 'npm', 'github'];
+
+.conocimientos
+  .conocimientos__header
+    .header__conveniente
+    .conocimiento__title
+      h1 Conocimientos
+  .conocimientos__content__container
+    .conocimientos__content__container__title
+      h1 Tecnologias
+    .conocimientos__content
+      each language in languages
+        .conocimientos__content__section(class=language[0])
+          .language
+            .circular
+              .circular__bar.left
+                .progress
+              .circular__bar.right
+                .progress
+              .circular__bar__left
+              .circular__bar__right
+              .circular__inner
+                img(src="assets/"+language[0]+".png" alt="css-logo")
+          .frameworks
+            each framework in language[1]
+              .frameworks__item(class=framework)
+                .frameworks__item__title
+                  figure
+                    img(src="assets/"+framework+".png" alt="css-logo")
+                  h1 #{framework}
+                .frameworks__item__container
+                  span.frameworks__item__container__progress
+  .conocimientos__content__container
+    .conocimientos__content__container__title
+      h1 Tecnologias Extras
+    .conocimientos__content.extras
+      each extra in extras
+        .conocimientos__content__section(class=extra)
+          .language
+            .circular.extra
+              .circular__bar.left
+                .progress
+              .circular__bar.right
+                .progress
+              .circular__bar__left
+              .circular__bar__right
+              .circular__inner
+                img(src="assets/"+extra+".png" alt="css-logo")
+  .conocimientos__content__container
+    .conocimientos__content__container__title
+      h1 Idiomas Y Estudios
+    .conocimientos__content

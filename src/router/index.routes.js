@@ -4,7 +4,8 @@ import {common} from './../js/common';
 
 const routes = {
   '/': pages.home(),
-  'portafolio': pages.portafolio()
+  'portafolio': pages.portafolio(),
+  'conocimientos': pages.conocimientos()
 };
 
 const router = () => {

@@ -1,6 +1,6 @@
 .portafolio {
   &__header {
-    background-color: var(--primary);
+    background-color: var(--headerPortfolioBackground);
     &__title {
       h1 {
         @include title;

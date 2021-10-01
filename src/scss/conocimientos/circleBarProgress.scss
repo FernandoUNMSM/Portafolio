@@ -1,0 +1,169 @@
+$circlesize: 250px;
+$circlesizesmall: 150px;
+.circular{
+  width: $circlesize;
+  height: $circlesize;
+  background-color: transparent;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e4f54e;
+  &.sub {
+    width: $circlesize/2;
+    height: $circlesize/2;
+  }
+  &__bar, &__bar__left, &__bar__right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    transform-origin: right center;
+    overflow: hidden;
+  }
+  &__bar__right{
+    left: initial;
+    right: 0;
+    z-index: 100;
+    background-color: var(--conocimientosBackground);
+  }
+  &__bar:nth-child(1) {
+    transform: rotate(180deg);
+    background-color: #e4f54e;
+    transition: transform 1s cubic-bezier(.28,.51,0,1.22);
+    animation: left 1s;
+    z-index: 120;
+  }
+
+  &__bar:nth-child(2) {
+    transform: rotate(240deg);
+    background-color: #e4f54e;
+    transition: transform 2s linear;
+    // animation: right .5s 1s;
+    z-index: 90;
+  }
+  &__bar__left {
+    opacity: 0;
+    background-color: var(--conocimientosBackground);
+    transition: opacity 0s linear;
+    animation: top 1.01s;
+    z-index: 130;
+  }
+  &__inner {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    z-index: 150;
+    display: flex;
+    background-color: var(--conocimientosBackground);
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #e4f54e;
+    img {
+      width: 70%;
+      height: 70%;
+    }
+  }
+  &.extra {
+    width: $circlesizesmall;
+    height: $circlesizesmall;
+  }
+}
+
+@keyframes left {
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes js {
+  0% {
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(300deg);
+  }
+}
+@keyframes html {
+  0% {
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(320deg);
+  }
+}
+@keyframes css {
+  0% {
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(310deg);
+  }
+}
+@keyframes nodejs {
+  0% {
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(190deg);
+  }
+}
+@keyframes webpack {
+  0% {
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(210deg);
+  }
+}
+@keyframes git {
+  0% {
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(260deg);
+  }
+}
+@keyframes heroku {
+  0% {
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(240deg);
+  }
+}
+@keyframes npm {
+  0% {
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(200deg);
+  }
+}
+@keyframes github {
+  0% {
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(270deg);
+  }
+}
+
+
+@keyframes top {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
