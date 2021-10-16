@@ -7,6 +7,7 @@ $darkHeaderConocimientos: rgb(37, 37, 37);
 // $darkConocimientos: rgb(68, 68, 68);
 $darkConocimientos: #fff;
 $darkAboutHeader: rgb(37, 37, 37);
+$darkProyectosHeader: rgb(37, 37, 37);
 
 $whitePrimary: rgb(255, 245, 151);
 $green: rgb(255, 255, 255);
@@ -16,6 +17,7 @@ $lightMenuBackground: rgba(250, 248, 244, 0.8);
 $lightHeaderConocimientos: rgb(115, 245, 201);
 $lightConocimientos: #fff;
 $lightAboutHeader: rgb(129, 245, 253);
+$lightProyectosHeader: rgb(252, 118, 147);
 
 .theme {
   --primary: #{$whitePrimary};
@@ -29,6 +31,7 @@ $lightAboutHeader: rgb(129, 245, 253);
   --conocimientosHeaderBackground: #{$lightHeaderConocimientos};
   --conocimientosBackground: #{$lightConocimientos};
   --headerPortfolioBackground: #{$lightAboutHeader};
+  --headerProyectosBackground: #{$lightProyectosHeader};
   &--dark {
     --primary: #{$grayPrimary};
     --secondary: #{$graySecondary};
@@ -41,6 +44,7 @@ $lightAboutHeader: rgb(129, 245, 253);
     --conocimientosHeaderBackground: #{$darkHeaderConocimientos};
     --conocimientosBackground: #{$darkConocimientos};
     --headerPortfolioBackground: #{$darkAboutHeader};
+    --headerProyectosBackground: #{$darkProyectosHeader};
   }
 }
 
@@ -67,6 +71,7 @@ body {
 .container {
   overflow: hidden;
 }
+
 @mixin texto {
   color: var(--colorText);
   font-weight: lighter;
@@ -93,4 +98,10 @@ body {
 }
 .header__conveniente {
   height: 60px;
+}
+.header__title {
+  h1 {
+    @include title;
+    text-transform: uppercase;
+  }
 }

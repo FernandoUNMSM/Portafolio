@@ -6,7 +6,7 @@
       @include title;
     }
   }
-  &__content {
+  &__content__home {
     display: grid;
     padding: 20px 30px;
     // grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
@@ -23,7 +23,7 @@
     }
   }
 }
-.proyectos__content__project {
+.proyectos__content__home__project {
   width: 100%;
   // max-width: 700px;
   height: 250px;
@@ -90,7 +90,7 @@
   }
 }
 @media (min-width: $medium) {
-  .proyectos__content__project__buttons {
+  .proyectos__content__home__project__buttons {
     flex-direction: row;
   }
 }
@@ -100,7 +100,7 @@
       h1 {
       }
     }
-    &__content {
+    &__content__home {
       padding: 20px 50px;
       grid-template-columns: repeat(2, 1fr);
       &__project {

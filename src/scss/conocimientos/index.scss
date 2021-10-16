@@ -23,10 +23,6 @@ $github: rgba(0,0,0,255);
 
 .conocimientos__header {
   background-color: var(--conocimientosHeaderBackground);
-  h1 {
-    @include title;
-    text-transform: uppercase;
-  }
 }
 .conocimientos__content__container__title {
   h1 {
@@ -47,6 +43,7 @@ $github: rgba(0,0,0,255);
     .conocimientos__content__section {
       display: initial;
       width: auto;
+      filter: initial;
     }
   }
   &__section {
@@ -367,6 +364,11 @@ $github: rgba(0,0,0,255);
     gap: 80px 40px;
     &__section {
       grid-template-columns: 40% 60%;
+      filter: grayscale(1);
+      transition: filter .3s;
+      &:hover {
+        filter: grayscale(0);
+      }
     }
   }
 }
