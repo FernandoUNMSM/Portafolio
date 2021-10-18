@@ -4,14 +4,11 @@ export default () => {
   const divElement = document.createElement("div");
   divElement.innerHTML = view();
   const buttonOpenMenu = divElement.querySelector('.burguerMenu')
-  const buttonCloseMenu = divElement.querySelector('.closeMenu')
   const menuHeader = divElement.querySelector('.header__menu')
   buttonOpenMenu.addEventListener('click', () => {
     menuHeader.classList.add('on')
   })
-  buttonCloseMenu.addEventListener('click', () => {
-    menuHeader.classList.remove('on')
-  })
+
   const togglebutton = divElement.querySelector('#toggle')
   const body = document.body
 
@@ -39,6 +36,13 @@ export default () => {
       header.classList.remove('on')
     }
   }
+
+  const menuOptions = divElement.querySelectorAll('.menuOption')
+  menuOptions.forEach(option => {
+    option.addEventListener('click', () => {
+      menuHeader.classList.remove('on')
+    })
+  })
 
   return divElement;
 };

@@ -18,7 +18,7 @@ $mysql: rgba(0,84,107,255);
 $webpack: rgba(142,214,251,255);
 $git: rgba(240,60,46,255);
 $heroku: rgba(103,98,166,255);
-$npm: rgba(203,56,55,255);
+$jest: rgba(153,66,79,255);
 $github: rgba(0,0,0,255);
 
 .conocimientos__header {
@@ -118,11 +118,14 @@ $github: rgba(0,0,0,255);
       .circular__bar:nth-child(2)
       {
         background-color: $webpack;
-        ;
+        animation-duration: 0s;
       }
       .circular__bar:nth-child(2) {
         transform: rotate(210deg);
-        animation: webpack .7s 1s;
+        // animation: $webpack .7s 1s;
+        animation-duration: 0s;
+        animation-delay: 0s;
+        z-index: 140;
       }
       .circular,
       .circular__inner {
@@ -134,11 +137,14 @@ $github: rgba(0,0,0,255);
       .circular__bar:nth-child(2)
       {
         background-color: $git;
-        ;
+        animation-duration: 0s;
       }
       .circular__bar:nth-child(2) {
         transform: rotate(260deg);
-        animation: git .7s 1s;
+        // animation: git .7s 1s;
+        animation-duration: 0s;
+        animation-delay: 0s;
+        z-index: 140;
       }
       .circular,
       .circular__inner {
@@ -150,31 +156,37 @@ $github: rgba(0,0,0,255);
       .circular__bar:nth-child(2)
       {
         background-color: $heroku;
-        ;
+        animation-duration: 0s;
       }
       .circular__bar:nth-child(2) {
         transform: rotate(240deg);
-        animation: heroku .7s 1s;
+        // animation: heroku .7s 1s;
+        animation-duration: 0s;
+        animation-delay: 0s;
+        z-index: 140;
       }
       .circular,
       .circular__inner {
         border-color: $heroku;
       }
     }
-    &.npm {
+    &.jest {
       .circular__bar:nth-child(1),
       .circular__bar:nth-child(2)
       {
-        background-color: $npm;
-        ;
+        background-color: $jest;
+        animation-duration: 0s;
       }
       .circular__bar:nth-child(2) {
         transform: rotate(200deg);
-        animation: npm .7s 1s;
+        // animation: jest .7s 1s;
+        animation-duration: 0s;
+        animation-delay: 0s;
+        z-index: 140;
       }
       .circular,
       .circular__inner {
-        border-color: $npm;
+        border-color: $jest;
       }
     }
     &.github {
@@ -182,11 +194,14 @@ $github: rgba(0,0,0,255);
       .circular__bar:nth-child(2)
       {
         background-color: $github;
-        ;
+        animation-duration: 0s;
       }
       .circular__bar:nth-child(2) {
         transform: rotate(270deg);
-        animation: github .7s 1s;
+        // animation: github .7s 1s;
+        animation-duration: 0s;
+        animation-delay: 0s;
+        z-index: 140;
       }
       .circular,
       .circular__inner {

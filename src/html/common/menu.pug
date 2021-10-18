@@ -3,10 +3,10 @@
 nav.header__menu__container
   i.fas.fa-bars.burguerMenu
   ul.header__menu
-    li.header__menu__item
+    li.header__menu__item.menuOption
       i.fas.fa-times.closeMenu
     each item in menu_items
-      li.header__menu__item
+      li.header__menu__item.menuOption
         a(href=item[1]) #{item[0]}
     li.header__menu__item
       .toggle#toggle

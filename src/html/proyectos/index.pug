@@ -1,16 +1,21 @@
-.proyectos
+-var proyectos = [['Jammy'], ['Frutarom'], ['Hospital FISI'], ['Barber Club Pirate 86']];
+.proyectos.proyectos__section
   .proyectos__header
     .header__conveniente
     .header__title
       h1 Proyectos
   .proyectos__content
-    .proyectos__content__item
-      .proyectos__content__item__info
-        .proyectos__content__item__info__title
-          h1 Jammy
-    .proyectos__content__item
-      .proyectos__content__item__info
-    .proyectos__content__item
-      .proyectos__content__item__info
-    .proyectos__content__item
-      .proyectos__content__item__info
+    each proyecto in proyectos
+      .proyectos__content__item
+        .container__proyecto__item
+          .proyectos__content__item__image
+          .proyectos__content__item__info
+            .proyectos__content__item__info__title
+              h1 #{proyecto[0]}
+            .proyectos__content__item__info__buttons
+              a.proyectos__content__item__info__buttons__item(href='/#')
+                <i class="fab fa-github"></i>
+                p Repositorio
+              a.proyectos__content__item__info__buttons__item(href='/#')
+                <i class="fab fa-chrome"></i>
+                p Pagina
