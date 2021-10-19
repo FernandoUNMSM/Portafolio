@@ -1,4 +1,5 @@
--var proyectos = [['Jammy'], ['Frutarom'], ['Hospital FISI'], ['Barber Club Pirate 86']];
+-var proyectos = [['Jammy', 'https://github.com/FernandoUNMSM/Mermelada', 'https://fernandounmsm.github.io/Mermelada/'], ['Portafolio', 'https://github.com/FernandoUNMSM/Portafolio', 'https://portafolio-lovat.vercel.app/'], ['Frutarom', 'https://github.com/FernandoUNMSM/Frutarom', 'https://fernandounmsm.github.io/Frutarom/index.html'], ['Hospital FISI', 'https://github.com/FernandoUNMSM/ClinicaUX', 'https://clinica-ux.vercel.app/'], ['Barber Club Pirate 86', 'https://github.com/FernandoUNMSM/Barberia', 'https://fernandounmsm.github.io/Barberia/'], ['Joyeria', 'https://github.com/FernandoUNMSM/Joyeria', 'https://fernandounmsm.github.io/Joyeria/']];
+
 .proyectos.proyectos__section
   .proyectos__header
     .header__conveniente
@@ -13,9 +14,9 @@
             .proyectos__content__item__info__title
               h1 #{proyecto[0]}
             .proyectos__content__item__info__buttons
-              a.proyectos__content__item__info__buttons__item(href='/#')
+              a.proyectos__content__item__info__buttons__item(href=proyecto[1] target='_blank')
                 <i class="fab fa-github"></i>
                 p Repositorio
-              a.proyectos__content__item__info__buttons__item(href='/#')
+              a.proyectos__content__item__info__buttons__item(href=proyecto[2] target='_blank')
                 <i class="fab fa-chrome"></i>
                 p Pagina
