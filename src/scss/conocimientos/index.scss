@@ -218,20 +218,21 @@ $github: rgba(0,0,0,255);
       height: 30px;
       display: flex;
       margin-bottom: 5px;
+      align-items: center;
       figure {
         margin: 0 10px 0 0;
-        height: 100%;
+        height: 50%;
         img {
           height: 100%;
         }
       }
       h1 {
-        font-size: 1.5em;
+        font-size: 1.1em;
       }
     }
     &__container {
       width: 100%;
-      height: 30px;
+      height: 10px;
       position: relative;
       background: transparent;
       &__progress {
@@ -379,11 +380,11 @@ $github: rgba(0,0,0,255);
     gap: 80px 40px;
     &__section {
       grid-template-columns: 40% 60%;
-      filter: grayscale(1);
+      // filter: grayscale(1);
       transition: filter .3s;
-      &:hover {
-        filter: grayscale(0);
-      }
+      // &:hover {
+      //   filter: grayscale(0);
+      // }
     }
   }
 }

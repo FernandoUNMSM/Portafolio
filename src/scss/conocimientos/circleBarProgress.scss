@@ -53,8 +53,8 @@ $circlesizesmall: 150px;
     z-index: 130;
   }
   &__inner {
-    width: 80%;
-    height: 80%;
+    width: 85%;
+    height: 85%;
     border-radius: 50%;
     z-index: 150;
     display: flex;
@@ -63,8 +63,8 @@ $circlesizesmall: 150px;
     align-items: center;
     border: 1px solid #e4f54e;
     img {
-      width: 70%;
-      height: 70%;
+      width: 60%;
+      height: 60%;
     }
   }
   &.extra {
