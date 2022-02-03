@@ -23,7 +23,7 @@
       height: 200px;
       overflow: hidden;
       border-radius: 50%;
-      filter: grayscale(1);
+      filter: var(--photo-GrayScale);
     }
   }
   &__text {

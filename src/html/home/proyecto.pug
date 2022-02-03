@@ -1,59 +1,12 @@
+-var proyectos = [['Jammy', 'https://github.com/FernandoUNMSM/Mermelada', 'https://fernandounmsm.github.io/Mermelada/'], ['Frutarom', 'https://github.com/FernandoUNMSM/Frutarom', 'https://fernandounmsm.github.io/Frutarom/index.html'], ['Hospital FISI', 'https://github.com/FernandoUNMSM/ClinicaUX', 'https://clinica-ux.vercel.app/'], ['Barber Club Pirate 86', 'https://github.com/FernandoUNMSM/Barberia', 'https://fernandounmsm.github.io/Barberia/']];
+
 .proyectos#proyectos
   .proyectos__title
     h1 Proyectos Realizados
   .proyectos__content__home
-    .proyectos__content__home__project
-      .proyectos__content__home__project__title
-        h1 Clinica Hololive
-      //- .proyectos__content__home__project__content
-      .proyectos__content__home__project__text
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, qui!
-      .proyectos__content__home__project__buttons
-        a.proyectos__content__home__project__buttons__item(href='https://github.com/FernandoUNMSM/ClinicaUX' target='_blank')
-          <i class="fab fa-github"></i>
-          p Repositorio
-        a.proyectos__content__home__project__buttons__item(href='https://clinica-ux.vercel.app/' target='_blank')
-          <i class="fab fa-chrome"></i>
-          p Pagina
-    .proyectos__content__home__project
-      .proyectos__content__home__project__title
-        h1 Jammy
-      //- .proyectos__content__home__project__content
-      .proyectos__content__home__project__text
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, qui!
-      .proyectos__content__home__project__buttons
-        a.proyectos__content__home__project__buttons__item(href='https://github.com/FernandoUNMSM/Mermelada' target='_blank')
-          <i class="fab fa-github"></i>
-          p Repositorio
-        a.proyectos__content__home__project__buttons__item(href='https://fernandounmsm.github.io/Mermelada/' target='_blank')
-          <i class="fab fa-chrome"></i>
-          p Pagina
-    .proyectos__content__home__project
-      .proyectos__content__home__project__title
-        h1 Frutarom
-      //- .proyectos__content__home__project__content
-      .proyectos__content__home__project__text
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, qui!
-      .proyectos__content__home__project__buttons
-        a.proyectos__content__home__project__buttons__item(href='https://github.com/FernandoUNMSM/Frutarom' target='_blank')
-          <i class="fab fa-github"></i>
-          p Repositorio
-        a.proyectos__content__home__project__buttons__item(href='https://fernandounmsm.github.io/Frutarom/index.html' target='_blank')
-          <i class="fab fa-chrome"></i>
-          p Pagina
-    .proyectos__content__home__project
-      .proyectos__content__home__project__title
-        h1 Joyeria
-      //- .proyectos__content__home__project__content
-      .proyectos__content__home__project__text
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, qui!
-      .proyectos__content__home__project__buttons
-        a.proyectos__content__home__project__buttons__item(href='https://github.com/FernandoUNMSM/Joyeria' target='_blank')
-          <i class="fab fa-github"></i>
-          p Repositorio
-        a.proyectos__content__home__project__buttons__item(href='https://fernandounmsm.github.io/Joyeria/' target='_blank')
-          <i class="fab fa-chrome"></i>
-          p Pagina
+    each proyecto in proyectos
+      a.proyectos__content__home__project(href=proyecto[2] target='_blank')
+        .proyectos__content__home__project__image
   .proyectos__more
     a.proyectos__more__button(href="/#/proyectos")
       <i class="fas fa-eye"></i>

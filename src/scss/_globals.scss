@@ -11,7 +11,7 @@ $darkProyectosHeader: rgb(37, 37, 37);
 
 $whitePrimary: rgb(255, 245, 151);
 $green: rgb(255, 255, 255);
-$whiteTercary: rgb(132, 255, 235);
+$whiteTercary: rgb(88, 226, 208);
 $lightTextPrimary: #000;
 $lightMenuBackground: rgba(250, 248, 244, 0.8);
 $lightHeaderConocimientos: rgb(115, 245, 201);
@@ -32,6 +32,7 @@ $lightProyectosHeader: rgb(250, 138, 64);
   --conocimientosBackground: #{$lightConocimientos};
   --headerPortfolioBackground: #{$lightAboutHeader};
   --headerProyectosBackground: #{$lightProyectosHeader};
+  --photo-GrayScale: grayscale(0);
   &--dark {
     --primary: #{$grayPrimary};
     --secondary: #{$graySecondary};
@@ -45,6 +46,7 @@ $lightProyectosHeader: rgb(250, 138, 64);
     --conocimientosBackground: #{$darkConocimientos};
     --headerPortfolioBackground: #{$darkAboutHeader};
     --headerProyectosBackground: #{$darkProyectosHeader};
+    --photo-GrayScale: grayscale(1);
   }
 }
 
